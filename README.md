@@ -270,21 +270,10 @@ Errors: `422` for out-of-range or inconsistent dates, `502` if Elexon cannot be 
 
 ## 8. Deployment
 
-Vercel does not run Docker containers, so this project is deployed with **Heroku** (permitted by the brief).
+This project Frontend is deployed with **Vercel** 
+Live Link : https://aabbccddxyz.vercel.app/
 
-### Heroku (container stack)
-
-```bash
-heroku login
-heroku create <app-name>
-heroku stack:set container
-git push heroku main
-heroku open
-```
-
-`heroku.yml` points Heroku at the `Dockerfile`; the app listens on `$PORT`.
-
-### Render (alternative)
+### Render (For Backend)
 
 Create a new *Blueprint* from the repository; `render.yaml` defines a Docker web service with a `/api/health`
 health check.
