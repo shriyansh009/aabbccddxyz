@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - wind-data:/srv/data   # keeps the downloaded Elexon data between restarts
+volumes:
+  wind-data:
